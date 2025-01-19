@@ -4,6 +4,8 @@ import HomePage from "./components/HomePage";
 import MentorForm from "./components/MentorForm";
 import Sidebar from "./components/Sidebar";
 import "./style.css"; // Ensure this contains your styles
+import './style.css';
+
 
 function App() {
   return (
