@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    color: white;
+}
+
+.app {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.homepage {
+    flex: 1;
+    text-align: center;
+    padding: 50px;
+}
