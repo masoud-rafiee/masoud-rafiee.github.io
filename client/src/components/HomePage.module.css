@@ -1,0 +1,160 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  overflow-x: hidden;
+}
+
+.homepage {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin: 15px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+.hero-subtext {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #b0bec5;
+}
+
+/* Animated Background */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: move 10s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.hero-bg .circle:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.hero-bg .circle:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.hero-bg .circle:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  top: 80%;
+  left: 30%;
+  animation-delay: 4s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-50px) translateX(50px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Weather and DateTime Section */
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-section div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Contact Section */
+.contact-section {
+  margin: 40px 0;
+  padding: 20px;
+  background: linear-gradient(to right, #28313b, #485461);
+  border-radius: 10px;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-section ul li {
+  margin: 10px 0;
+}
+
+.contact-section ul li a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section ul li a:hover {
+  text-decoration: underline;
+}
