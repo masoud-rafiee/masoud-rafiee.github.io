@@ -14,63 +14,50 @@ function MentorForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form Data Submitted:", formData);
+    setFormData({ name: "", email: "", message: "" });
     setSubmitted(true);
 
-    // You can integrate with a backend or API to handle submissions
-    console.log("Form submitted:", formData);
-
-    // Reset form after submission
-    setFormData({ name: "", email: "", message: "" });
-
-    // Optional: Add an alert or a confirmation message
-    setTimeout(() => setSubmitted(false), 3000);
+    setTimeout(() => setSubmitted(false), 3000); // Clear "Submitted" message after 3 seconds
   };
 
   return (
     <div className="mentor-form">
       <h2>Mentor or Feedback Form</h2>
-      <p>Help me improve by sharing your thoughts, suggestions, or mentoring advice!</p>
-
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Your Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
 
-        <div className="form-group">
-          <label htmlFor="email">Your Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
 
-        <div className="form-group">
-          <label htmlFor="message">Your Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
+        <label htmlFor="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        ></textarea>
 
-        <button type="submit" className="submit-btn">
+        <button type="submit">
           {submitted ? "Submitted ✅" : "Submit"}
         </button>
       </form>
